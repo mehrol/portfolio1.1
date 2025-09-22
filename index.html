@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Vikrant — DevOps & IT Portfolio</title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+:root { --bg:#071017; --card:#0b1220; --accent:#2dd4bf; --muted:#9ca3af; --glass: rgba(255,255,255,0.03); }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#e6eef3; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+#tsparticles{ position: fixed; inset:0; z-index:0; }
+.container{position:relative;z-index:5; max-width:1100px; margin:0 auto; padding:48px 20px;}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); padding:24px; border-radius:14px; backdrop-filter: blur(6px);}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:10px 0;margin-bottom:20px}
+.brand{font-weight:700;letter-spacing:2px;font-family:ui-monospace, SFMono-Regular, Menlo, monospace;}
+.nav-links a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+.hero{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center;margin-top:20px}
+.profile-pic{width:220px;height:320px;border-radius:18px;overflow:hidden;border:4px solid rgba(45,212,191,0.08);box-shadow:0 10px 20px rgba(2,6,23,0.6)}
+.profile-pic img{width:100%;height:100%;object-fit:contain;display:block}
+.hero-right h1{font-size:36px;line-height:1.05;margin-bottom:8px;color:#ffffff}
+.tagline{color:var(--muted);margin-bottom:12px}
+.pulse-btn{display:inline-block;padding:10px 16px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#071017;font-weight:700;text-decoration:none;box-shadow:0 6px 22px rgba(44,213,191,0.12);}
+.section{margin-top:34px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.badge{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);color:var(--muted);font-weight:600}
+.project-card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02);}
+.project-stack{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.footer{margin-top:40px;padding:20px;text-align:center;color:var(--muted);font-size:14px}
+@media (max-width:900px){.hero{grid-template-columns:1fr;}.profile-pic{width:220px;height:220px;margin:0 auto;border-radius:50%} .grid-3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="tsparticles"></div>
+<div class="container">
+  <header class="nav">
+    <div class="brand">VIKRANT</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certs">Certifications</a>
+      <a href="#contact">Contact</a>
+      <a href="#" id="themeToggle">Toggle</a>
+    </nav>
+  </header>
+  <section class="card hero" id="home" data-aos="fade-up">
+    <div class="profile-pic">
+      <img src="assets/profile.png" alt="Vikrant" />
+    </div>
+    <div class="hero-right">
+      <p class="tagline">IT Specialist · DevOps Engineer · Linux Administrator</p>
+      <h1 id="typed">Designing resilient infrastructure and repeatable delivery pipelines.</h1>
+      <p class="tagline">I build secure, observable platforms using automation, containers and infrastructure-as-code.</p>
+      <div style="margin-top:16px">
+        <a class="pulse-btn" href="https://drive.usercontent.google.com/u/0/uc?id=1aAPwEGWZDqYy0s2yezbO6Ectf2o_aYQS&export=download" download>Download CV</a>
+      </div>
+      <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+        <div class="badge">Infra Mgmt</div>
+        <div class="badge">Virtualization</div>
+        <div class="badge">Server Mgmt</div>
+        <div class="badge">Ansible</div>
+        <div class="badge">Terraform</div>
+        <div class="badge">CI/CD</div>
+        <div class="badge">Docker</div>
+        <div class="badge">Kubernetes</div>
+        <div class="badge">Monitoring</div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="section card" data-aos="fade-up" data-aos-delay="100">
+    <h2>About</h2>
+    <p style="margin-top:8px;color:var(--muted);line-height:1.6">
+      I am Vikrant, an IT Specialist and DevOps Engineer with hands-on experience designing and operating secure, automated infrastructure.
+      My core expertise includes building CI/CD pipelines, container orchestration (Kubernetes), infrastructure as code (Terraform), and observability with Prometheus and Grafana.
+      I focus on reliability, security, and fast iteration to help teams ship with confidence.
+    </p>
+    <div style="margin-top:12px" class="grid-3">
+      <div class="card"><strong>Core Tools</strong><div style="margin-top:8px" class="project-stack"><span class="badge">Docker</span><span class="badge">Ansible</span>
+      <span class="badge">ArgoCD</span><span class="badge">CICD (Jenkins, Github-Action, Gitlab)</span><span class="badge">Secret-Managers</span><span class="badge">Kubernetes</span><span class="badge">Terraform</span><span class="badge">Ansible</span></div></div>
+      <div class="card"><strong>Cloud & Infra</strong><div style="margin-top:8px" class="project-stack"><span class="badge">AWS (EKS, EC2, VPC, IAM, Amazon-Amplify, ECS, EBS, Lambda, S3)</span><span class="badge">GCP (GKE)</span></div></div>
+      <div class="card"><strong>Monitoring & Sec</strong><div style="margin-top:8px" class="project-stack"><span class="badge">Prometheus</span><span class="badge">Grafana</span><span class="badge">ELK</span><span class="badge">Busy-box</span></div></div>
+    </div>
+  </section>
+  <section id="projects" class="section" data-aos="fade-up" data-aos-delay="200">
+    <h2>Projects</h2>
+    <div style="margin-top:16px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+      <div class="project-card card" data-aos="zoom-in">
+        <strong>AirOS</strong>
+        <p style="color:var(--muted);margin-top:8px">AI-driven object detection platform capturing RTSP streams, storing segments in MinIO, automated CI/CD (ArgoCD, GitHub Actions), security scanning, and robust monitoring.</p>
+        <div class="project-stack"><span class="badge">RTSP</span><span class="badge">MinIO</span><span class="badge">ArgoCD</span><span class="badge">Docker</span><span class="badge">Github-Action</span>
+        <span class="badge">ELK Stack</span><span class="badge">Grafana & Prometheus</span><span class="badge">Kubernetes</span></div>
+      </div>
+      <div class="project-card card" data-aos="zoom-in" data-aos-delay="50">
+        <strong>HealthTracer</strong>
+        <p style="color:var(--muted);margin-top:8px">Multi-tenant heart-health monitoring SaaS using Kafka for pub/sub, Nexus for artifacts, Terraform-managed infra on GKE, and Grafana for observability.</p>
+        <div class="project-stack"><span class="badge">Kafka</span><span class="badge">GCS</span><span class="badge">Grafana & Prometheus</span><span class="badge">Gitlab CICD</span><span class="badge">Nexus</span><span class="badge">GKE</span><span class="badge">Terraform</span></div>
+      </div>
+      <div class="project-card card" data-aos="zoom-in">
+        <strong>WittyEMS</strong>
+        <p style="color:var(--muted);margin-top:8px">Enterprise HRMS deployed with Docker and Jenkins; managed build pipelines, image lifecycle, and environment promotions.</p>
+        <div class="project-stack"><span class="badge">Docker</span><span class="badge">Jenkins</span><span class="badge">Maven</span></div>
+      </div>
+      <div class="project-card card" data-aos="zoom-in" data-aos-delay="50">
+        <strong>WittyTicketing</strong>
+        <p style="color:var(--muted);margin-top:8px">Internal ticketing system with containerized deployment and pipeline-driven releases.</p>
+        <div class="project-stack"><span class="badge">Docker</span><span class="badge">Jenkins</span></div>
+      </div>
+         <div class="project-card card" data-aos="zoom-in">
+        <strong>Configuration Mgmt</strong>
+        <p style="color:var(--muted);margin-top:8px">Wittybrains most of infrastructure management solution leveraging modern DevOps practices.</p>
+        <div class="project-stack"><span class="badge">Ansible (Linux, Windows)</span>
+      </div>
+    </div>
+  </section>
+  <section id="certs" class="section card" data-aos="fade-up" data-aos-delay="300">
+    <h2>Certifications & Training</h2>
+    <ul style="margin-top:8px;color:var(--muted);line-height:1.8">
+      <li>NIELIT IT 'O' Level</li>
+      <li>RHCSA (Red Hat Certified System Administrator)</li>
+      <li>DevOps Courses — Edureka, Tutedude</li>
+      <li>AWS Training — 4Achievers (In Progress)</li>
+    </ul>
+  </section>
+  <section id="contact" class="section card" data-aos="fade-up" data-aos-delay="400">
+    <h2>Contact</h2>
+    <p style="margin-top:8px;color:var(--muted)">Email: <a href="mailto:vikasmehra759@gmail.com" style="color:var(--accent)">vikasmehra759@gmail.com</a></p>
+    <p style="color:var(--muted)">GitHub: <a href="https://github.com/mehrol" target="_blank" style="color:var(--accent)">github.com/mehrol</a></p>
+    <div style="margin-top:16px;display:flex;gap:10px">
+      <a href="https://www.linkedin.com/in/vikrant-mehrol-1a92b4111/" class="badge">LinkedIn</a>
+      <a href="https://drive.google.com/file/d/1aAPwEGWZDqYy0s2yezbO6Ectf2o_aYQS/view" class="badge">Resume</a>
+    </div>
+  </section>
+  <div class="footer">© 2025 Vikrant — DevOps & IT Engineer</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.1/tsparticles.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:800, once:true, easing:'ease-out-cubic'});
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', function(e){
+  e.preventDefault();
+  document.documentElement.style.setProperty('--bg', document.documentElement.style.getPropertyValue('--bg') === '#071017' ? '#f7fafc' : '#071017');
+  document.documentElement.style.setProperty('--card', document.documentElement.style.getPropertyValue('--card') === '#0b1220' ? '#ffffff' : '#0b1220');
+  document.body.classList.toggle('light');
+});
+const typed = document.getElementById('typed');
+const phrases = ['Designing resilient infrastructure and repeatable delivery pipelines.', 'I design secure, scalable platforms for production.', 'Automation, Observability, Security.'];
+let idx = 0; let char = 0; let forward = true;
+function type() {
+  const current = phrases[idx];
+  if(forward){ char++; if(char<=current.length) typed.textContent = current.slice(0,char); else forward=false; setTimeout(type,40); }
+  else { char--; if(char>=0){ typed.textContent = current.slice(0,char); setTimeout(type,20);} else { forward=true; idx=(idx+1)%phrases.length; setTimeout(type,400);} }
+}
+type();
+tsParticles.load("tsparticles", {
+  fpsLimit: 60,
+  particles: {
+    number: { value: 60, density: { enable: true, area: 800 } },
+    color: { value: ["#2dd4bf", "#7c3aed", "#60a5fa"] },
+    shape: { type: "circle" },
+    opacity: { value: 0.12, random: true },
+    size: { value: { min: 1, max: 3 } },
+    move: { enable: true, speed: 0.6, direction: "bottom", outModes: "out" }
+  },
+  interactivity: { events: { onHover: { enable: true, mode: "repulse" } } },
+  detectRetina: true
+});
+</script>
+</body>
+</html>
