@@ -6,28 +6,61 @@
 <title>Vikrant — DevOps & IT Portfolio</title>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
-:root { --bg:#071017; --card:#0b1220; --accent:#2dd4bf; --muted:#9ca3af; --glass: rgba(255,255,255,0.03); }
+:root {
+  --bg:#071017; 
+  --card:#0b1220; 
+  --accent:#2dd4bf; 
+  --muted:#9ca3af; 
+  --glass: rgba(255,255,255,0.03); 
+  --text:#e6eef3;
+}
+body.light {
+  --bg:#0d1117; 
+  --card:#161b22; 
+  --accent:#7c3aed; 
+  --muted:#cbd5e1; 
+  --text:#f8fafc;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#e6eef3; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+body{
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+  background:var(--bg); 
+  color:var(--text); 
+  -webkit-font-smoothing:antialiased; 
+  overflow-x:hidden;
+}
 #tsparticles{ position: fixed; inset:0; z-index:0; }
 .container{position:relative;z-index:5; max-width:1100px; margin:0 auto; padding:48px 20px;}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); padding:24px; border-radius:14px; backdrop-filter: blur(6px);}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); padding:24px; border-radius:14px; backdrop-filter: blur(6px); transition: all 0.3s ease-in-out;}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:10px 0;margin-bottom:20px}
-.brand{font-size: 2.5rem;font-weight:900;letter-spacing:3px;font-family:ui-monospace, SFMono-Regular, Menlo, monospace;}
-.nav-links a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+.brand{font-size: 2.8rem;font-weight:900;letter-spacing:3px;font-family:ui-monospace, SFMono-Regular, Menlo, monospace;color:var(--accent);text-shadow:0 0 8px var(--accent);}
+.nav-links{display:flex;align-items:center;gap:18px}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600}
+.theme-icon{cursor:pointer;font-size:1.5rem;color:var(--accent);transition:transform .2s}
+.theme-icon:hover{transform:scale(1.2)}
 .hero{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center;margin-top:20px}
-.profile-pic{width:220px;height:320px;border-radius:18px;overflow:hidden;border:4px solid rgba(45,212,191,0.08);box-shadow:0 10px 20px rgba(2,6,23,0.6)}
-.profile-pic img{width:100%;height:100%;object-fit:contain;display:block}
+.profile-pic{width:220px;height:320px;border-radius:18px;overflow:hidden;border:4px solid rgba(45,212,191,0.08);box-shadow:0 10px 20px rgba(2,6,23,0.6);transition: all 0.3s ease-in-out;}
+.profile-pic img{width:100%;height:100%;object-fit:cover;display:block}
 .hero-right h1{font-size:36px;line-height:1.05;margin-bottom:8px;color:#ffffff}
 .tagline{color:var(--muted);margin-bottom:12px}
-.pulse-btn{display:inline-block;padding:10px 16px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#071017;font-weight:700;text-decoration:none;box-shadow:0 6px 22px rgba(44,213,191,0.12);}
+.pulse-btn{display:inline-block;padding:10px 16px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#071017;font-weight:700;text-decoration:none;box-shadow:0 6px 22px rgba(44,213,191,0.12);transition: transform 0.2s;}
+.pulse-btn:hover{transform:scale(1.05);}
 .section{margin-top:34px}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .badge{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);color:var(--muted);font-weight:600}
 .project-card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02);}
 .project-stack{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
 .footer{margin-top:40px;padding:20px;text-align:center;color:var(--muted);font-size:14px}
-@media (max-width:900px){.hero{grid-template-columns:1fr;}.profile-pic{width:220px;height:220px;margin:0 auto;border-radius:50%} .grid-3{grid-template-columns:1fr}}
+
+/* 📱 Mobile Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;text-align:center;}
+  .profile-pic{width:180px;height:180px;margin:0 auto;border-radius:50%;box-shadow:0 6px 16px rgba(0,0,0,0.5);}
+  .hero-right h1{font-size:28px;}
+  .tagline{text-align:center;}
+  .brand{font-size:2rem;letter-spacing:2px;flex:1;text-align:center;}
+  .grid-3{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -40,7 +73,7 @@ body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Rob
       <a href="#projects">Projects</a>
       <a href="#certs">Certifications</a>
       <a href="#contact">Contact</a>
-      <a href="#" id="themeToggle">Toggle</a>
+      <span id="themeToggle" class="theme-icon">🌙</span>
     </nav>
   </header>
   <section class="card hero" id="home" data-aos="fade-up">
@@ -137,14 +170,15 @@ body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Rob
 <script>
 AOS.init({duration:800, once:true, easing:'ease-out-cubic'});
 const themeToggle = document.getElementById('themeToggle');
-themeToggle.addEventListener('click', function(e){
-  e.preventDefault();
-  document.documentElement.style.setProperty('--bg', document.documentElement.style.getPropertyValue('--bg') === '#071017' ? '#f7fafc' : '#071017');
-  document.documentElement.style.setProperty('--card', document.documentElement.style.getPropertyValue('--card') === '#0b1220' ? '#ffffff' : '#0b1220');
+let dark = true;
+themeToggle.addEventListener('click', function(){
+  dark = !dark;
   document.body.classList.toggle('light');
+  themeToggle.textContent = dark ? "🌙" : "☀️";
 });
+
 const typed = document.getElementById('typed');
-const phrases = ['Designing resilient infrastructure and repeatable delivery pipelines.', 'I design secure, scalable platforms for production.', 'Automation, Observability, Security.'];
+const phrases = ['Designing resilient infrastructure and repeatable delivery pipelines.', 'I design secure, scalable platforms for production.', 'Automation · Observability · Security.'];
 let idx = 0; let char = 0; let forward = true;
 function type() {
   const current = phrases[idx];
@@ -152,10 +186,12 @@ function type() {
   else { char--; if(char>=0){ typed.textContent = current.slice(0,char); setTimeout(type,20);} else { forward=true; idx=(idx+1)%phrases.length; setTimeout(type,400);} }
 }
 type();
+
+const particleCount = window.innerWidth < 600 ? 20 : 60;
 tsParticles.load("tsparticles", {
   fpsLimit: 60,
   particles: {
-    number: { value: 60, density: { enable: true, area: 800 } },
+    number: { value: particleCount, density: { enable: true, area: 800 } },
     color: { value: ["#2dd4bf", "#7c3aed", "#60a5fa"] },
     shape: { type: "circle" },
     opacity: { value: 0.12, random: true },
@@ -168,3 +204,4 @@ tsParticles.load("tsparticles", {
 </script>
 </body>
 </html>
+
